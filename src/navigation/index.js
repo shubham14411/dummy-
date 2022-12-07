@@ -1,41 +1,40 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from '../screens/Home';
-import Routine from '../screens/Routine';
-import Stats from '../screens/Stats';
-import Activity from '../screens/Activity';
-import MyTabs from './bottomTab';
+import MyTasks from '../component/MyTasks';
+import TodayTask from '../component/TodayTask';
+import Show from '../component/showAll';
+import NewTask from '../component/NewTask';
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigation() {
-
+  
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen
-        name="Home"
-        component={MyTabs}
+        name="MyTasks"
+        component={MyTasks}
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
-        name="Routine"
-        component={Routine}
+        name="TodayTask"
+        component={TodayTask}
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
-        name="Stats"
-        component={Stats}
+        name="Show"
+        component={Show}
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
-        name="Acitivity"
-        component={Activity}
+        name="New"
+        component={NewTask}
         options={{
           headerShown: false,
         }}
