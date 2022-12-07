@@ -245,7 +245,7 @@ const MyTasks = ({navigation}) => {
               fontStyle: 'italic',
               color: 'white',
             }}>
-            MONDAY
+            Monday
           </Text>
           <Text
             style={{
